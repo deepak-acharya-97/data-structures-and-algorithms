@@ -8,6 +8,14 @@ def sort01(arr):
         else:
             low += 1
 
+def sort01_ver1(arr):
+    low = -1
+    high = len(arr)-1
+    for ind, val in enumerate(arr):
+        if(val == 0):
+            low += 1
+            arr[low], arr[ind] = arr[ind], arr[low]
+
 arr = [0, 1, 0, 1, 0, 1, 0, 0, 0]
-sort01(arr)
+sort01_ver1(arr)
 print(arr)
